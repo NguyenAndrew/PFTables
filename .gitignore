@@ -115,3 +115,6 @@ dmypy.json
 
 # VS Code
 .vscode
+
+# Output files
+output.csv

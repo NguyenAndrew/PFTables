@@ -1,3 +1,7 @@
 [TYPECHECK]
 
 ignored-classes=Generator
+
+[MESSAGES CONTROL]
+
+disable=W0122 # Disables "Use of exec" message

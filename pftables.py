@@ -13,27 +13,43 @@ def main():
         return
 
     csv_row_count = int(sys.argv[1])
-    csv_header = ['Company', 'Color']
-    silentremove('output.csv')
+    csv_header, faker_executables = parse_input_csv()
 
+    silent_remove('output.csv')
     with open('output.csv', 'w', newline='') as output_file:
         csv_writer = csv.writer(output_file, quoting=csv.QUOTE_ALL)
         csv_writer.writerow(csv_header)
 
         for _ in range(csv_row_count):
-            csv_writer.writerow(generate_fake_list())
+            csv_writer.writerow(generate_fake_list(faker_executables))
 
 ### Helper Functions located below ###
 
-def generate_fake_list():
-    """ Returns an array with fake data """
-    returned_list = [
-        FAKE.company(),
-        FAKE.color_name()
-    ]
-    return returned_list
+def parse_input_csv():
+    """ Returns the headers and the faker executables"""
+    with open('input.csv') as input_file:
+        csv_reader = csv.reader(input_file, delimiter=',')    
+        csv_header = next(csv_reader)
+        faker_executables = [
+            'FAKE.' + function_name + '()'
+            for function_name in next(csv_reader)
+        ]
+        return [csv_header, faker_executables]
 
-def silentremove(filename):
+def generate_fake_list(faker_executables):
+    """ Returns an array with fake data """
+    return [
+        exec_and_return(executable) for executable in faker_executables
+    ]
+
+def exec_and_return(executable):
+    """ Uses Python's exec command, and obtains its return value """
+    # To understand this code: https://bugs.python.org/issue4831
+    fresh_locals = {}
+    exec('return_value = ' + executable, globals(), fresh_locals)
+    return fresh_locals['return_value']
+
+def silent_remove(filename):
     """ Remove the file silently if exists, for all scenarios toss an error """
     try:
         os.remove(filename)
