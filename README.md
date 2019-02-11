@@ -1,6 +1,6 @@
 # PFTables
 
-PFTables creates CSV files with fake data
+Generate CSV tables with fake data (in Python)
 
 Installation Instructions:
 
