@@ -11,7 +11,7 @@ Generate CSV tables with fake data (in Python). Can use both faker or custom arr
 
 ## Example Usage
 
-1. Create input.csv (See https://faker.readthedocs.io/en/master/ to see available faker functions)
+1. Create input.csv (See https://faker.readthedocs.io/en/master/ for available faker functions)
 
 ```
 "Company","Color", "Food"
