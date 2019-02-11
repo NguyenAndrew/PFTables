@@ -1,4 +1,5 @@
 """ PFTables creates a fake table CSV file in Python """
+import sys
 import csv
 import os
 import errno
@@ -7,9 +8,13 @@ FAKE = Faker()
 
 def main():
     """ Entry point of this script. This function is executed at the bottom of this script. """
-    silentremove('output.csv')
+    if len(sys.argv) != 2:
+        print("python pftables.py fake_row_count -> Example: python pftables.py 10")
+        return
+
+    csv_row_count = int(sys.argv[1])
     csv_header = ['Company', 'Color']
-    csv_row_count = 10
+    silentremove('output.csv')
 
     with open('output.csv', 'w', newline='') as output_file:
         csv_writer = csv.writer(output_file, quoting=csv.QUOTE_ALL)
