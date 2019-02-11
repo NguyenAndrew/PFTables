@@ -1,2 +1,2 @@
-"Company","Color", "Food", "Drinks"
-"company","color_name", "[Taco's | Burger""s | Pizza,s]", "[Water | Coffee | Milk | Tea | Soda | Lemonade]"
+"Company","Credit Card Expiration", "Food", "Drinks"
+"company()","credit_card_expire(start=""now"", end=""+10y"", date_format=""%m/%y"")", "[Taco's | Burger""s | Pizza,s]", "[Water | Coffee | Milk | Tea | Soda | Lemonade]"

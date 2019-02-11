@@ -15,7 +15,7 @@ Generate CSV tables with fake data (in Python). Can use both faker or custom arr
 
 ```
 "Company","Color", "Food"
-"company","color_name", "[Taco's | Burger""s | Pizza,s]"
+"company()","color_name()", "[Taco's | Burger""s | Pizza,s]"
 ```
 
 Company | Color | Food

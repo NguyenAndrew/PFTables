@@ -1,2 +1,2 @@
 "Company","Color", "Food", "Drinks"
-"company","color_name", "[Taco's | Burger""s | Pizza,s]", "[Water | Coffee | Milk | Tea | Soda | Lemonade]"
+"company()","color_name()", "[Taco's | Burger""s | Pizza,s]", "[Water | Coffee | Milk | Tea | Soda | Lemonade]"

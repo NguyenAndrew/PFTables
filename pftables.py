@@ -51,7 +51,7 @@ def make_array_or_faker_function_string(cell):
     if (cell.startswith('[') and cell.endswith(']')):
         return cell[1:-1].split(' | ') # Removes the brackets before split
 
-    return 'FAKE.' + cell + '()'
+    return 'FAKE.' + cell
 
 def silent_remove(filename):
     """ Remove the file silently if exists, for all scenarios toss an error """
