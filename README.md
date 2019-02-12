@@ -1,6 +1,6 @@
 # PFTables
 
-Generate CSV tables with fake data (in Python). Can use Faker, custom arrays, or your own custom functions (hooks) to generate fake data
+Generate CSV tables with fake data (in Python). Can use Faker, custom arrays, or your own custom functions (hooks).
 
 ## Installation Instructions:
 
@@ -50,6 +50,7 @@ Garcia, Rhodes and Willis | NavajoWhite | Pizza,s
 4. Get Creative!
 
 Example Input: input.csv
+
 Company (Faker Example 1/2) | Credit Card Expiration (Faker Example 2/2) | Food (Array Example 1/2) | Drink (Array Example 2/2) | Element (Hooks Example 1/2) | Abode (Hooks Example 2/2)
 --- | --- | --- | --- | --- | --- 
 company() | credit_card_expire(start=""now"", end=""+10y"", date_format=""%m/%y"") |[Taco's \| Burger""s \| Pizza,s] | [Water \| Coffee \| Milk \| Tea \| Soda \| Lemonade] |{first_custom_function_example()} | {second_custom_function_example(['House', 'Apartment'])}
@@ -72,6 +73,7 @@ def second_custom_function_example(choices):
 ```
  
 Example Result: output.csv
+
 Company (Faker Example 1/2) | Credit Card Expiration (Faker Example 2/2) | Food (Array Example 1/2) | Drink (Array Example 2/2) | Element (Hooks Example 1/2) | Abode (Hooks Example 2/2)
 --- | --- | --- | --- | --- | --- 
 Campbell Inc | 11/19 | Taco's | Coffee | Fire | Apartment
