@@ -4,6 +4,7 @@ import errno
 import os
 import random
 import sys
+from tqdm import tqdm
 from faker import Faker
 FAKE = Faker()
 
@@ -21,7 +22,7 @@ def main():
     with open('output.csv', 'w', newline='') as output_file:
         csv_writer = csv.writer(output_file, quoting=csv.QUOTE_ALL)
         csv_writer.writerow(csv_header)
-        for _ in range(csv_row_count):
+        for _ in tqdm(range(csv_row_count)):
             csv_writer.writerow(generate_fake_list(array_or_executables_list))
     print("... and finished! Created output.csv with " + str(csv_row_count) + " fake data rows.")
 

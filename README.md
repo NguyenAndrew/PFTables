@@ -81,9 +81,11 @@ Clark LLC | 08/26 | Pizza,s | Coffee | Fire | Apartment
 Ramirez Ltd | 02/19 | Taco's | Milk | Fire | House
 English, Ray and Jones | 12/19 | Taco's | Tea | Fire | Apartment
 Johnson, Jackson and Rangel | 09/23 | Taco's | Tea | Wind | House
+
 ## Dependencies
 
 Dependency | Reason for Using
 --- |---
  Pylint | Linter
  Faker | Generates Fake Data
+ tqdm | Creates a Progress Bar
