@@ -26,7 +26,7 @@ Company | Color | Food |
 2. Run the command: `python pftables.py 5` 
     * Number at the end of the command indicates the number of rows you want.
     * This number can be fairly large! 
-    * Caveat: This program has no loading/progress bar. Be prepared to wait, if set to over 1 million rows or higher.
+    * This program has a loading/progress bar with estimated completion time. Be prepared to wait, if set to over 1 million rows or higher.
 
 3. You should now see and be able to use output.csv
 
